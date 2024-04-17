@@ -7,9 +7,9 @@ import java.util.Date;
 
 @Setter@Getter
 public class PromoCode {
-    //private String id;
-    //private String name;
-    //private String description;
-    //private Date expiryDate;
-    //private Double minimumPurchaseAmount;
+    private String id;
+    private String name;
+    private String description;
+    private Date expiryDate;
+    private Double minimumPurchaseAmount;
 }

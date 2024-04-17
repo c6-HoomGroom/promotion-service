@@ -7,12 +7,12 @@ import lombok.Getter;
 
 @Setter@Getter
 public class User {
-    //private Long id;
-    //private String fullName;
-    //private Date birthDate;
-    //private String gender;
-    //private String username;
-    //private String email;
-    //private String password;
-    //private PromoCode coupons;
+    private Long id;
+    private String fullName;
+    private Date birthDate;
+    private String gender;
+    private String username;
+    private String email;
+    private String password;
+    private PromoCode coupons;
 }
