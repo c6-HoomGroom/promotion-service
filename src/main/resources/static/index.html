@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claim Promo Code</title>
+</head>
+<body>
+
+<h1>Claim Promo Code</h1>
+
+<form action="#" th:action="@{/claim}" th:object="${promoForm}" method="post">
+    <label for="promoCode">Enter Promo Code:</label>
+    <input type="text" id="promoCode" name="promoCode" th:field="*{promoCode}" required>
+    <button type="submit">Claim</button>
+</form>
+
+</body>
+</html>
