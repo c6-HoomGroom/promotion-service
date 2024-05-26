@@ -5,39 +5,25 @@ import id.ac.ui.cs.advprog.promotionservice.model.PromoCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/promocodes")
+@RequestMapping("/api/promo-codes")
 public class PromoCodeController {
-    /*
+
     @Autowired
     private PromoCodeService promoCodeService;
 
-    @GetMapping
-    public List<PromoCode> getAllPromoCodes() {
-        return promoCodeService.getAllPromoCodes();
-    }
-
-    @GetMapping("/{id}")
-    public PromoCode getPromoCodeById(@PathVariable String id) {
-        return promoCodeService.getPromoCodeById(id);
-    }
-
     @PostMapping
-    public PromoCode createPromoCode(@RequestBody PromoCode promoCode) {
-        return promoCodeService.createPromoCode(promoCode);
+    public ResponseEntity<PromoCode> createPromoCode(@RequestBody PromoCode promoCode) {
+        PromoCode createdPromoCode = promoCodeService.createPromoCode(promoCode);
+        return new ResponseEntity<>(createdPromoCode, HttpStatus.CREATED);
     }
-
-    @PutMapping("/{id}")
-    public PromoCode updatePromoCode(@PathVariable String id, @RequestBody PromoCode promoCode) {
-        return promoCodeService.updatePromoCode(id, promoCode);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deletePromoCode(@PathVariable String id) {
-        promoCodeService.deletePromoCode(id);
-    }
-
-     */
 }
+
 
